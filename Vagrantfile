@@ -52,7 +52,6 @@ Vagrant.configure(2) do |config|
 
     master.vm.provision "shell", inline: <<-SHELL
       sudo apt-get install -y build-essential git postgresql-client postgresql-server-dev-all
-      mkdir -p ~/tmp
       cd /tmp
       git clone https://github.com/citusdata/pg_shard.git
       cd pg_shard
